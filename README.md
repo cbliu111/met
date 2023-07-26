@@ -26,7 +26,7 @@ Additionally, the parameters of the model architecture, the hyperparameters for 
 Please refer to the existing examples in the `models` folder.
 
 # Training
-Once the `model.py` file is provided, generating of the reward model set and training of MET can be done by simply run the scripts within `main.py`. 
+Once the `model.py` file is provided, generating of the reward model set and training of MET can be done by simply run the scripts within `main.py` on a machine equipped with CUDA device. 
 
 The scripts will first generate the reward model set as instructed by the hyperparameters contained in the `model.py` file, store the trained reward models, and then use the stored reward models to train MET. 
 
@@ -60,3 +60,11 @@ The script is based on the [biocircuits](https://pypi.org/project/biocircuits/) 
 For running the simulation, a transition matrix with corresponding propensity function should be provided. 
 After specifying the initial population, time points for recording, number of trajectories and number of CPU threads in the `model.py` file, the simulation can be simply done using the script in `ssa.py`.
 
+# Plot the results
+Example scripts from reproducing the figures in the manuscripts are provided in the file `toggle_plot.ipynb`. 
+
+The file can be opened with applications such as vscode, jupyter notebook or pycharm. 
+
+Running the code requires state sampling files from Gillespie, RNN and MET. 
+
+Time-dependent averaged trajectories, marginal distributions, pair-wise joint distributions and comparison of mean are used to visualize the sampling results. 
